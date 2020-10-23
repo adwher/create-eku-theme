@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&family=Manrope:wght@300;800&display=swap');
+
+/* My awesome eku theme */
+
+@import "./scss/utilities/variables.scss";
+
+@import "./node_modules/eku/scss/base/all";
+@import "./node_modules/eku/scss/components/all";
+@import "./node_modules/eku/scss/elements/all";
+@import "./node_modules/eku/scss/forms/all";
+@import "./node_modules/eku/scss/helpers/all";
+@import "./node_modules/eku/scss/layout/all";
