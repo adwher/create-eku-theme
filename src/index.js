@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 const fs = require("fs-extra")
 const print = require("./print")
-const { join } = require("path")
+const { join, resolve, basename } = require("path")
 
-const defaultName = "awesome-eku-theme"
-const projectName = process.argv.slice(2)[0] || defaultName
-
-const folderPath = join(process.cwd(), projectName)
+const folderPath = resolve(process.argv.slice(2)[0])
+const projectName = basename(folderPath)
 
 function copyTemplate() {
     const templatePath = join(__dirname, "../template")
@@ -30,9 +28,9 @@ function makePackageFile() {
         name: projectName,
         version: "1.0.0",
         description: "Awesome eku theme",
-        script: {
-            minify: "sass eku.scss css/eku.min.css --no-source-map -s compressed",
-            build: "sass eku.scss css/eku.css -s expanded",
+        scripts: {
+            minify: `sass ${projectName}.scss css/${projectName}.min.css --no-source-map -s compressed`,
+            build: `sass ${projectName}.scss css/${projectName}.css -s expanded`,
             watch: "npm run build -- --watch"
         },
         dependencies: {
