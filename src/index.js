@@ -15,11 +15,22 @@ function copyTemplate() {
     print.done("Make theme template")
 }
 
-function changeThemeFilename() {
+function changeThemeVariables() {
+    // scss
+
     const oldPath = join(folderPath, "theme.scss")
     const newPath = join(folderPath, projectName + ".scss")
 
     fs.renameSync(oldPath, newPath)
+
+    // html
+
+    let htmlPath = join(folderPath, "index.html")
+
+    let html = fs.readFileSync(htmlPath).toString()
+    html = html.replace(/{{ name }}/gi, projectName)
+
+    fs.writeFileSync(htmlPath, html)
 }
 
 function makePackageFile() {
@@ -54,7 +65,7 @@ function createProject() {
     console.log("Welcome to the create-eku-theme initilizer, this make a entire Eku theme project from scratch for you, so enjoy and we hope you like.")
 
     copyTemplate()
-    changeThemeFilename()
+    changeThemeVariables()
     makePackageFile()
     installDependencies()
 

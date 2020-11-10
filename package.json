@@ -1,6 +1,6 @@
 {
   "name": "create-eku-theme",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create a custom Eku theme",
   "bin": {
     "create-eku-theme": "./src/index.js"
@@ -8,7 +8,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ekucss/create-theme.git"
+    "url": "git+https://github.com/adwher/create-theme.git"
   },
   "keywords": [
     "initializer",
@@ -19,9 +19,9 @@
   "author": "Andres Celis <adwher@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ekucss/create-theme/issues"
+    "url": "https://github.com/adwher/create-theme/issues"
   },
-  "homepage": "https://github.com/ekucss/create-theme#readme",
+  "homepage": "https://github.com/adwher/create-theme#readme",
   "dependencies": {
     "chalk": "^4.1.0",
     "cross-spawn": "^7.0.3",
