@@ -45,7 +45,7 @@ function makePackageFile() {
             watch: "npm run build -- --watch"
         },
         dependencies: {
-            eku: "0.3.3"
+            eku: "latest"
         },
     }
 
@@ -60,22 +60,20 @@ function installDependencies() {
     spawn.sync("npm", ["install"], { stdio: 'inherit', cwd: folderPath })
 }
 
-function createProject() {
-    print.info("Eku theme")
-    console.log("Welcome to the create-eku-theme initilizer, this make a entire Eku theme project from scratch for you, so enjoy and we hope you like.")
+// cli
 
-    copyTemplate()
-    changeThemeVariables()
-    makePackageFile()
-    installDependencies()
+print.info("Eku theme")
+console.log("Welcome to the create-eku-theme initilizer, this make a entire Eku theme project from scratch for you, so enjoy and we hope you like.")
 
-    print.info("Well, all is done")
-    console.log("Now you can go to the folder and use the next commands to start to build an awesome themes.\n")
+copyTemplate()
+changeThemeVariables()
+makePackageFile()
+installDependencies()
 
-    print.command("npm run watch", "be earing to sass files and make a build")
-    print.command("npm run build", "build the project with source map")
-    print.command("npm run minify", "make a minificated version without source map")
-    console.log("\n")
-}
+print.info("Well, all is done")
+console.log("Now you can go to the folder and use the next commands to start to build an awesome themes.\n")
 
-createProject()
+print.command("npm run watch", "be earing to sass files and make a build")
+print.command("npm run build", "build the project with source map")
+print.command("npm run minify", "make a minificated version without source map")
+console.log("\n")

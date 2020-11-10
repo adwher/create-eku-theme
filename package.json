@@ -5,7 +5,6 @@
   "bin": {
     "create-eku-theme": "./src/index.js"
   },
-  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adwher/create-theme.git"
