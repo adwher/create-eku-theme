@@ -1,6 +1,6 @@
 {
   "name": "create-eku-theme",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Create a custom Eku theme",
   "bin": {
     "create-eku-theme": "./src/index.js"
